@@ -16,3 +16,78 @@ body {
   font-family: "Work Sans", Arial, sans-serif;
   background: #fff;
 }
+
+.site-header {
+  height: 92px;
+  width: 100%;
+  padding: 0 max(8.5%, calc((100% - 1170px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  background: #fff;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #182b2b;
+  text-decoration: none;
+  font-size: 43px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -5px;
+}
+
+.brand-ring {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  border: 5px solid var(--accent);
+  border-radius: 50%;
+  margin-left: 2px;
+}
+
+.menu-toggle { position: absolute; opacity: 0; pointer-events: none; }
+
+.menu-button {
+  width: 32px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background: #111;
+  transition: transform .25s ease, opacity .2s ease;
+}
+
+.navigation {
+  position: absolute;
+  top: 76px;
+  right: max(8.5%, calc((100% - 1170px) / 2));
+  width: 200px;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+}
+
+.navigation a {
+  padding: 13px 20px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navigation a:hover { color: var(--accent); background: #f7f7f7; }
+.menu-toggle:checked ~ .navigation { display: flex; }
