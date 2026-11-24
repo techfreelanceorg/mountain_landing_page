@@ -91,3 +91,47 @@ body {
 
 .navigation a:hover { color: var(--accent); background: #f7f7f7; }
 .menu-toggle:checked ~ .navigation { display: flex; }
+
+.hero {
+  min-height: 760px;
+  height: calc(100vh - 92px);
+  max-height: 900px;
+  background-image: url("assets/mountains.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(255 255 255 / 10%);
+}
+
+.hero-content {
+  position: relative;
+  transform: translateY(-12px);
+  padding: 24px;
+}
+
+.hero h1 {
+  color: var(--accent);
+  font-size: clamp(36px, 3.2vw, 54px);
+  line-height: 1.15;
+  margin: 0 0 30px;
+  font-weight: 800;
+}
+
+.hero p {
+  color: #242424;
+  font-size: 23px;
+  line-height: 2;
+  font-weight: 600;
+  margin: 0;
+}
